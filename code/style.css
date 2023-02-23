@@ -202,7 +202,7 @@ line-height: 44px;
 #slaider{
     position: relative;
     bottom: 600px;
-    right: 40px;
+    right: 10px;
 }
 
 #slider { /*положение слайдера*/
@@ -369,27 +369,89 @@ label, a{ /*при наведении на стрелки или переклю�
     font-size: 19px;
     font-family: 'Inter';
 }
-#dozorova{
-    position: relative;
-    left:420px;
-    bottom:450px;
-    font-family: 'Inter';
-font-style: normal;
-font-weight: 200;
-font-size: 20px;
-line-height: 44px;
-}
-#doz1{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    left: 420px;
-    bottom: 400px;
-}
-#doz3{
-    position: relative;
-    width: 200px;
-    height: 300px;
-    left: 440px;
-    bottom: 400px;
+/* iphone xr*/@media screen and (min-width:300px) and (max-width:930px){ 
+    #s1{
+        position: relative;
+        left:70px;
+        font-size: 15px;
+        line-height: 24px;
+        
+    }
+    #s2{
+        position: relative;
+        left:130px;
+        font-size: 15px;
+        bottom: 55px;
+    }
+    #s3{
+        position: relative;
+        left:190px;
+        font-size: 15px;
+    }
+    #s4{
+        position: relative;
+        left:250px;
+        font-size: 15px;
+        bottom: 173px;
+    }
+    #logo{
+        position: relative;
+        left:0px;
+        width: 50px;
+        height: 50px;
+        bottom:420px
+    }
+    #sr1{
+        position: relative;
+        left:350px;
+        bottom: 260px;
+    }
+    #slaider{
+        position: relative;
+        bottom: 750px;
+        left:1px
+    }
+    #novinki{
+        position: relative;
+        bottom:750px;
+        left:30px;
+        font-size: 18px;
+    }
+    #tovar1{
+        position: relative;
+        left:25px;
+        bottom: 765px;
+        width: 330px;
+        height: 120px;
+        border: solid 1px black;
+    }
+    #hits{
+        position: relative;
+        left:30px;
+        bottom:770px;
+        font-size: 18px;
+    }
+    #tovar2{
+        position: relative;
+        left:25px;
+        bottom:785px;
+        width: 330px;
+        height: 120px;
+        border: solid 1px black;
+    }
+    #newl{
+        position: relative;
+        left:30px;
+        bottom:790px;
+        font-size: 18px;
+    }
+    #tovar3{
+        position: relative;
+        left:25px;
+        bottom:805px;
+        width: 330px;
+        height: 120px;
+        border: solid 1px black;
+
+    }
 }
