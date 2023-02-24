@@ -1,0 +1,169 @@
+body{
+    overflow-x: hidden;
+}
+#shapka{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 20px;
+line-height: 44px;
+
+}
+#logo{
+    position:relative;
+    width: 130px;
+    height: 130px;
+    left: 380px;
+    bottom: 370px;
+}
+#s1{
+    position: relative;
+width: 110px;
+height: 44px;
+left: 400px;
+top: 14px;
+font-weight: 200;
+font-size: 20px;
+
+
+}
+#s2{
+    position: relative;
+width: 127px;
+height: 44px;
+left: 500px;
+bottom: 50px;
+
+font-weight: 200;
+font-size: 20px; 
+}
+#s3{
+    position: relative;
+width: 134px;
+height: 44px;
+left: 600px;
+bottom: 114px;
+
+font-weight: 200;
+font-size: 20px;
+}
+#s4{
+    position: relative;
+    width: 200px;
+    height: 44px;
+    left: 700px;
+    bottom: 178px;
+    
+    font-weight: 200;
+    font-size: 20px;
+}
+#shapka2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 44px;
+}
+#sr1{
+    position: relative;
+    width: 130px;
+    height: 44px;
+    left: 1070px;
+    bottom: 200px;
+    
+    font-weight: 200;
+    font-size: 15px;
+}
+#sr2{
+    position: relative;
+    width: 130px;
+    height: 44px;
+    left: 1200px;
+    bottom: 259px;
+    
+    font-weight: 200;
+    font-size: 15px;   
+}
+#sr3{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left: 1370px;
+    bottom: 320px;
+    
+    font-weight: 200;
+    font-size: 15px;   
+}
+#sb1{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:380px;
+    bottom: 340px;
+
+    font-weight: 200;
+    font-size: 30px;
+}
+#sb2{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:600px;
+    bottom: 500px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#sb3{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:750px;
+    bottom: 560px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#sb4{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:980px;
+    bottom: 618px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#sb5{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:1200px;
+    bottom: 677px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#contact{
+    position: relative;
+    left:420px;
+    bottom:650px;
+    font-size: 28px;
+}
+#firmshop{
+    position: relative;
+    left:420px;
+    bottom:640px;
+    font-size: 30px;
+}
+#textzal{
+    position: relative;
+    left:420px;
+    bottom:680px;
+    font-size: 17px;
+}
+#kart{
+    position: relative;
+    left:420px;
+    bottom:500px;
+}

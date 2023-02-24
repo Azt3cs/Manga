@@ -1,0 +1,255 @@
+body{
+    overflow-x: hidden;
+}
+#shapka{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 20px;
+line-height: 44px;
+
+}
+#logo{
+    position:relative;
+    width: 130px;
+    height: 130px;
+    left: 380px;
+    bottom: 370px;
+}
+#s1{
+    position: relative;
+width: 110px;
+height: 44px;
+left: 400px;
+top: 14px;
+font-weight: 200;
+font-size: 20px;
+
+
+}
+#s2{
+    position: relative;
+width: 127px;
+height: 44px;
+left: 500px;
+bottom: 50px;
+
+font-weight: 200;
+font-size: 20px; 
+}
+#s3{
+    position: relative;
+width: 134px;
+height: 44px;
+left: 600px;
+bottom: 114px;
+
+font-weight: 200;
+font-size: 20px;
+}
+#s4{
+    position: relative;
+    width: 200px;
+    height: 44px;
+    left: 700px;
+    bottom: 178px;
+    
+    font-weight: 200;
+    font-size: 20px;
+}
+#shapka2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 44px;
+}
+#sr1{
+    position: relative;
+    width: 130px;
+    height: 44px;
+    left: 1070px;
+    bottom: 200px;
+    
+    font-weight: 200;
+    font-size: 15px;
+}
+#sr2{
+    position: relative;
+    width: 130px;
+    height: 44px;
+    left: 1200px;
+    bottom: 259px;
+    
+    font-weight: 200;
+    font-size: 15px;   
+}
+#sr3{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left: 1370px;
+    bottom: 320px;
+    
+    font-weight: 200;
+    font-size: 15px;   
+}
+#sb1{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:380px;
+    bottom: 340px;
+
+    font-weight: 200;
+    font-size: 30px;
+}
+#sb2{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:600px;
+    bottom: 500px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#sb3{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:750px;
+    bottom: 560px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#sb4{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:980px;
+    bottom: 618px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#sb5{
+    position: relative;
+    width: 150px;
+    height: 44px;
+    left:1200px;
+    bottom: 677px;
+
+    font-weight: 200;
+    font-size: 15px;
+}
+#zagolovog{
+    position: relative;
+    bottom: 650px;
+    left:400px;
+}
+#bornov1{
+    background-color: blueviolet;
+    position: relative;
+    left:400px;
+    border-radius: 30px;
+    bottom: 650px;
+    border: solid 3px red;
+    width: 950px;
+    height: 230px;
+}
+#k8{
+    border-radius: 30px;
+    position: relative;
+    width: 170px;
+    height: 200px;
+    left:20px;
+    top:14px;
+}
+#bornov2{
+    background-color: blueviolet;
+    position: relative;
+    left:400px;
+    border-radius: 30px;
+    bottom: 610px;
+    border: solid 3px red;
+    width: 950px;
+    height: 230px;
+}
+#pl{
+    border-radius: 30px;
+    position: relative;
+    width: 170px;
+    height: 200px;
+    left:20px;
+    top:14px;
+}
+#bornov3{
+    background-color: blueviolet;
+    position: relative;
+    left:400px;
+    border-radius: 30px;
+    bottom: 570px;
+    border: solid 3px red;
+    width: 950px;
+    height: 230px;
+}
+#s100{
+    border-radius: 30px;
+    position: relative;
+    width: 170px;
+    height: 200px;
+    left:20px;
+    top:14px;
+}
+#kon{
+    border-radius: 30px;
+    position: relative;
+    width: 170px;
+    height: 200px;
+    left:20px;
+    top:14px;
+}
+#bornov4{
+    background-color: blueviolet;
+    position: relative;
+    left:400px;
+    border-radius: 30px;
+    bottom: 530px;
+    border: solid 3px red;
+    width: 950px;
+    height: 230px;
+}
+#bornov5{
+    background-color: blueviolet;
+    position: relative;
+    left:400px;
+    border-radius: 30px;
+    bottom: 490px;
+    border: solid 3px red;
+    width: 950px;
+    height: 230px;
+}
+#k8t{
+    position: relative;
+    bottom:200px;
+    left: 230px;
+}
+#plt{
+    position: relative;
+    bottom:190px;
+    left:230px;
+}
+a{
+    text-decoration:none;
+}
+a:visited{
+    color:black;
+    text-decoration:none;
+}
+#t100{
+    position: relative;
+    bottom:190px;
+    left:200px;
+}
