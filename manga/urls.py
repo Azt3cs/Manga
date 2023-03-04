@@ -9,8 +9,11 @@ from mangaapi.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_page)
-
+    path('', index_page, name='main'),
+    path('manga/', manga_page, name='manga'),
+    path('manva/', manva_page, name='manva'),
+    path('ranobe/', ranobe_page, name='ranobe'),
+    path('accounts/', include('allauth.urls')),
 
 ]
 

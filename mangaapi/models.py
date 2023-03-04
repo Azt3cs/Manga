@@ -2,7 +2,7 @@ import imghdr
 from django.db import models
 
 
-class Manga(models.Model):
+class JapanManga(models.Model):
     title = models.CharField(max_length=30, blank=False)
     year = models.CharField(max_length=4, blank=False)
     description = models.TextField(blank=False)
@@ -13,11 +13,12 @@ class Manga(models.Model):
     stock = models.BooleanField()
     date = models.DateTimeField()
     titleManga = models.CharField(max_length=30, blank=False)
+
     def __str__(self):
         return self.title
 
 
-class manva(models.Model):
+class ChinaManva(models.Model):
     title = models.CharField(max_length=30, blank=False)
     year = models.CharField(max_length=4, blank=False)
     description = models.TextField()
@@ -28,7 +29,8 @@ class manva(models.Model):
     stock = models.BooleanField()
     date = models.DateTimeField()
 
-class ranobe(models.Model):
+
+class JapanRanobe(models.Model):
     title = models.CharField(max_length=30, blank=False)
     year = models.CharField(max_length=4, blank=False)
     description = models.TextField()
