@@ -13,21 +13,21 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
       <div class="container">
-    <img id="logo" class="navbar-brand" src="{% static "img/logo.jpg" %}"  >
+   <a href="{% url 'main' %}"> <img id="logo" class="navbar-brand" src="{% static "img/logo.jpg" %}"  ></a>
         <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav me-auto mt-5 mt-lg-6">
             <div class="head1">
             <li class="nav-item">
-                <a href="./manga.html"><h3 id="s1">Манга</h3></a>
+                <a href="{% url 'manga' %}"><h3 id="s1">Манга</h3></a>
             </li>
             <li class="nav-item">
-                <a href="./ranobe.html"><h3 id="s2">Ранобэ</h3></a>
+                <a href="{% url 'ranobe' %}"><h3 id="s2">Ранобэ</h3></a>
             </li>
 
             <li class="nav-item">
-    <a href="./manhwa.html"><h3 id="s3">Манхва</h3></a>
+    <a href="{% url 'manva' %}"><h3 id="s3">Манхва</h3></a>
 
             </li>
             <li class="nav-item">
