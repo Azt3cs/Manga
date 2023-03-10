@@ -1,47 +1,104 @@
         {% include 'include/header.html' %}
 
-    <div class="container ">
-        <div class="row">
-        <div class="col-lg-7 mx-auto ">
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Shop in style</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <!-- новинки манга -->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% for m in manga %}
+                    {% if m.type == 'new' %}
+                      
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{m.photo.url}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">{{m.title}}</h5>
+                                    <p>{{m.price}}</p>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'manga_id' m.id %}">Перейти</a></div>
+                           
+                                     </div> 
+                    </div>
+                </div>{% endif %}{% endfor %}
+            </div>
+        </section>
 
- 
+         <!-- новинки манхва -->
+         <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% for m in manva %}
+                    {% if m.type == 'new' %}
+                      
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{m.photos.url}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">{{m.title}}</h5>
+                                    <p>{{m.price}}</p>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'manva_id' m.id %}">Перейти</a></div>
+                           
+                                     </div> 
+                    </div>
+                </div>{% endif %}{% endfor %}
+            </div>
+        </section>
 
-<br>
-<div id="claidern">
-    <h3 id="novinki">Новинки</h3>
-    
-</div><div class="contTovar1">
-{% for m in manga %}
-<div id="tovar1"><img width="120px" height="80%"   src="{{ m.photo.url }}"><p>{{ m.title }}</p></div>
- {% endfor %} </div>
-<div id="claidern">
-    <h3 id="hits">Хиты продаж</h3>
-</div>
-<div id="tovar2"></div>
-<div id="claidern">
-    <h3 id="newl">Новые лицензии</h3>
-    </div>
-    <div id="tovar3"></div>
-    <h3 id="dobro">Добро пожаловать в интернет-магазин издательства Aztecs</h3>
-    <p id="niz">На нашем сайте вы можете найти все от манги, до фигурок.Так же вы можете найти работы таких известных мангак как:<br>
-    <i>Тацуки Фудзимото(Fire Punch), Наоки Урасава(Billy Bat),Кью Хаяшида(Dorohedoro)
-    Кадзума Кондо(Smokin' Parade)</i>.<br>Поклонники аниме-культуры России могут приобрести любимые вещи в нашем магазине по хорошей цене и с удобной доставкой.<br>Так же в нашем
-магазине вы можете приобрести продукцию от других издательств, таких как</p>
-<ul id="izdat">
-    <li>Азбука</li>
-    <li>Истари Комикс</li>
-    <li>Alt Graph</li>
-    <li>Фабрика Комиксов</li>
-    <li>Клуб Фантакстика</li>
-    <li>Xl Media</li>
-    <li>Комильфо</li>
-</ul>
-<p id="niz">Вы можете заказать понравившиеся товары онлайн на сайте нашего интернет-магазина и получить их с доставкой до Москвы, <br>
-    Санкт-Петербурга, Новосибирска, Екатеринбурга, Казани, Нижнего Новгорода, Челябинска, Самары, Уфы, Ростова-на-Дону, <br>
-    Омска, Волгограда, Воронежа, Краснодара, Красноярска, Перми и других городов России и СНГ. Есть вопросы? <br>
-    Звоните по будням с 9:00 до 18:00, и мы будем рады вас проконсультировать!</p>
-    </div>
-    </div>
-    </div>
-</body>
+         <!-- новинки ранобе -->
+         <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% for r in ranobe %}
+                    {% if r.type == 'new' %}
+                      
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{r.photo.url}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">{{r.title}}</h5>
+                                    <p>{{r.price}}</p>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'ranobe_id' r.id %}">Перейти</a></div>
+                           
+                                     </div> 
+                    </div>
+                </div>{% endif %}{% endfor %}
+            </div>
+        </section>
+
+
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      
+    </body>
 </html>

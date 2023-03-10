@@ -7,12 +7,13 @@ class JapanManga(models.Model):
     year = models.CharField(max_length=4, blank=False)
     description = models.TextField(blank=False)
     author = models.CharField(max_length=20, blank=False)
-    genre = models.CharField(max_length=10, blank=False, primary_key=True)
+    genre = models.CharField(max_length=10, blank=False)
     photo = models.ImageField(upload_to='photo/%Y/%m/%d/')
     price = models.CharField(max_length=6, blank=False)
     stock = models.BooleanField()
     date = models.DateTimeField()
     titleManga = models.CharField(max_length=30, blank=False)
+    type = models.CharField(blank=False, max_length=50)
 
     def __str__(self):
         return self.title
@@ -28,7 +29,11 @@ class ChinaManva(models.Model):
     price = models.CharField(max_length=6, blank=False)
     stock = models.BooleanField()
     date = models.DateTimeField()
+    type = models.CharField(blank=False, max_length=50)
 
+
+    def __str__(self):
+        return self.title
 
 class JapanRanobe(models.Model):
     title = models.CharField(max_length=30, blank=False)
@@ -40,3 +45,7 @@ class JapanRanobe(models.Model):
     price = models.CharField(max_length=6, blank=False)
     stock = models.BooleanField()
     date = models.DateTimeField()
+    type = models.CharField(blank=False, max_length=50)
+
+    def __str__(self):
+        return self.title
