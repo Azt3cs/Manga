@@ -1,0 +1,31 @@
+{% include 'include/header.html' %}
+<style>
+    .feed{
+        border:solid black 2px;
+        width:fit-content;
+    }
+    .useles{
+        display:none;
+    }
+</style>
+<body>
+
+<form action="feedback" method="POST">
+    {% csrf_token %}
+    <input type="text" class="useles" value="{{user.first_name}} {{user.last_name}}" name="name">
+    <input type="email" class="useles" value="{{user.email}}" name="email" >
+    <textarea  name="message"></textarea><br>
+    <button type="submit">Отправить</button>
+</form>
+<br>
+
+{% for f in fb %}
+<div class="feed">
+    <p>Имя:{{f.name}}</p>
+    <p>Отзыв:{{f.message}}</p>
+</div>
+<br>
+{% endfor %}
+
+</body>
+</html>

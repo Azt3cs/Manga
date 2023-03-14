@@ -1,26 +1,47 @@
 {% include 'include/header.html' %}
         <!-- Product section-->
+<style>
+    input{
+    border:none;
+    }
+    #user{
+    display:none;
+    }
+
+</style>
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
+
+                <form action="korzina_page" method="post">
+    {% csrf_token %}
+
                 <div class="row gx-4 gx-lg-5 align-items-center">
-{% for m in manga %}
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{m.photo.url}}" alt="..." /></div>
+{% for t in tovar %}
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{t.photo.url}}" alt="..." /></div>
                     <div class="col-md-6">
-                        <div class="small mb-1">{{ m.author }}</div>
-                        <h1 class="display-5 fw-bolder">{{m.title}}</h1>
+                        <div class="small mb-1">{{ t.author }}</div>
+                        <h1 class="display-5 fw-bolder"><input type="text" name="tovarname" value="{{t.title}}" id=""></h1>
+                        <p>{{t.genre}}</p>
                         <div class="fs-5 mb-5">
-                            <span>{{m.price}} руб.</span><br>
-                        {% if m.stock != true %}
+                            <span><input type="text" name="price" value="{{t.price}}" id=""></span><span> руб.</span><br>
+                        {% if t.stock == True  %}
                         <span>Есть в наличии</span>
                         {% else %}
                         <span>Нет в наличии</span>
                         {% endif %}
                         </div>
-                        <p class="lead">{{m.description}}</p>
-                       
+                        <p class="lead">{{t.description}}</p>
+                        {% if user.is_authenticated %}
+                        {% if t.stock == True %}
+                        <button>В корзину</button>
+                       {% endif %}
+                       {% endif %}
+
                     </div>
                 </div>
             </div>
+            <input type="text" name="name" value="{{user.username}}" id="user">
+            </form>
             {% endfor %}
         </section>
         

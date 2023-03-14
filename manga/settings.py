@@ -122,7 +122,13 @@ USE_TZ = True
 
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_REDIRECT_URL = "/"
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_FORMS = {
 
+    'login': 'manga.forms.SignIn',
+    'signup': 'manga.forms.SignUp',
+
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

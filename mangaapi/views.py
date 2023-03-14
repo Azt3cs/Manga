@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics, mixins
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from .models import *
 from django.contrib.auth.forms import AuthenticationForm
 from rest_framework.viewsets import GenericViewSet
@@ -8,30 +8,46 @@ from django.contrib.auth.views import LoginView
 from django.core.paginator import Paginator
 
 def index_page(request):
-    manga = JapanManga.objects.all()
-    manva = ChinaManva.objects.all()
-    ranobe = JapanRanobe.objects.all()
-    return render(request, 'mangaapi/index.html',{"manga": manga, "manva":manva,"ranobe":ranobe})
+    tovar = Tovar.objects.all()
+    return render(request, 'mangaapi/index.html', {'tovar':tovar})
 
 def manga_page(request):
-    manga = JapanManga.objects.all()
-    return render(request, 'mangaapi/manga.html',{"manga":manga})
-def manga_id(request, manga_id):
-    manga = JapanManga.objects.filter(id=manga_id)
-    return render(request, 'mangaapi/about.html',{'manga':manga})
-
-def manva_id(request, manva_id):
-    manva = ChinaManva.objects.filter(id=manva_id)
-    return render(request, 'mangaapi/aboutManhva.html',{'manva':manva})
-
-def ranobe_id(request, ranobe_id):
-    ranobe = JapanRanobe.objects.filter(id=ranobe_id)
-    return render(request, 'mangaapi/aboutRanobe.html',{'ranobe':ranobe})
-
+    tovar = Tovar.objects.all()
+    return render(request, 'mangaapi/manga.html', {'tovar':tovar})
 def manva_page(request):
-    manva = ChinaManva.objects.all()
-    return render(request, 'mangaapi/manhva.html', {"manva":manva})
-
+    tovar = Tovar.objects.all()
+    return render(request, 'mangaapi/manhva.html', {'tovar':tovar})
 def ranobe_page(request):
-    ranobe = JapanRanobe.objects.all()
-    return render(request, 'mangaapi/ranobe.html', {"ranobe":ranobe})
+    tovar = Tovar.objects.all()
+    return render(request, 'mangaapi/ranobe.html', {'tovar':tovar})
+def tovar_id(request, tovar_id):
+    tovar = Tovar.objects.filter(id=tovar_id)
+    return render(request, 'mangaapi/about.html', {'tovar':tovar})
+
+
+def profile_page(request):
+    return render(request, 'mangaapi/profile.html')
+
+def korzina_page(request):
+
+    if request.method == 'POST':
+        korzina = Korzina()
+        korzina.name = request.POST.get("tovarname")
+        korzina.price = request.POST.get("price")
+        korzina.username = request.POST.get("name")
+        korzina.save()
+    return HttpResponseRedirect("/")
+
+
+def feedback_page(request):
+    feedback = Feedback.objects.all()
+    return render(request, 'mangaapi/feedback.html',{'fb':feedback})
+
+def feedback(request):
+    if request.method == 'POST':
+        feedback = Feedback()
+        feedback.name = request.POST.get("name")
+        feedback.email =request.POST.get("email")
+        feedback.message =request.POST.get("message")
+        feedback.save()
+    return HttpResponseRedirect("/feedback")
